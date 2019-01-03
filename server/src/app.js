@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 
-app.get('/', (req, res, next) => {
+app.post('/register', (req, res, next) => {
     res.status(200).json({
-        message: 'This is my endpoint'
+        message: `Hello ${req.body.email} Your user was registered have fun!!`
     })
 })
 
